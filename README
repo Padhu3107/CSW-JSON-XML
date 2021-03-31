@@ -1,0 +1,59 @@
+=Read Me
+
+by Prakash Sagadevan for Cybersecurityworks (CSW)
+
+== Module
+
+	JSON to XML Converter
+
+== Requirement
+
+	JSON data needs to be converted to XML document.
+		a) JSON type should be the name of the XML element tag.
+		b) Name in the key-value pair should be the attribute of the element.
+		c) Value in the key-value pair should be text content (characters) in the XML for an element.
+
+== Description
+	
+	This module converts especially JSON file to XML file as per the instructions provided.
+	StAX parser is used to create XML document.
+	javax.json used to validate and navigate the structure.
+	First, the necessary details are obtained from the user and validated.
+	Next, the JSON is obtained as in a file and necessary processing such as validation are done.
+	Processor creation based on type of input data and desired output format is done using factory pattern.
+	Bridge pattern is used to call the necessary converter object from input processor.
+	
+
+== Bundled Libraries (Dependencies)
+	
+	javax.json-1.1.4.jar
+
+== Documentation
+
+	Source code details can be referrred in JavaDocs
+	(https://github.com/Padhu3107/CSW-JSON-XML/tree/main/javadoc)
+	Other details such as description, deployment, execution steps can be referred in the respective subsection of README
+	
+== Build and Installation
+	
+	All the files can be downloaded from GitHub
+	(https://github.com/Padhu3107/CSW-JSON-XML)
+	Do the build as per the below steps to create JSONtoXMLConverter.jar
+	
+	Executables (JAR) can be created by running the shell script as provided below
+		1. Go to src folder location.
+		2. Change the mode to 755 for build.sh (chmod 755 build.sh)
+		2. Run build.sh under src folder.
+		3. JSONtoXMLConverter.jar file will be created under dest folder
+		4. Move the jar to any valid location for execution or Execute the jar in the same location
+
+		
+== Execution 
+	
+	1. Jar should be executed using following command,
+		java -jar JSONtoXMLConverter.jar
+	2. Provide input path with file name which contains JSON data.
+	3. Provide Output path with file name which would contain XML data.
+	4. Output will be printed in the console.
+	5. XML file will be placed in the path provided by the user.
+
